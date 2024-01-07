@@ -1,0 +1,14 @@
+.skillsSection {
+  display: flex;
+  justify-content: space-evenly;
+  margin: var(--margin-m) 0;
+  width: 95%;
+}
+
+.skillItem {
+  background-color: var(--color-400);
+  color: var(--color-300);
+  padding: var(--padding-xs);
+  border-radius: var(--border-radius);
+  font-size: small;
+}

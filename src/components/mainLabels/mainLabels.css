@@ -1,0 +1,18 @@
+.mainLabelsbuttonsDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: var(--padding-s);
+  background-color: transparent;
+}
+
+.mainLabelsbuttonsDiv > button {
+  height: 40px;
+  font-size: 20px;
+  padding: var(--padding-s);
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  border: none;
+  background-color: transparent;
+}

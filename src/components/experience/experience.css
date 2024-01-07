@@ -1,0 +1,71 @@
+.experienceCardSection {
+  margin-top: var(--margin-s);
+  margin-bottom: var(--margin-s);
+  background-color: var(--color-100);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.experienceCardSection > h1 {
+  margin: var(--margin-s);
+}
+
+.cardDivContainer {
+  background-color: var(--color-000);
+}
+
+.cardDiv {
+  margin-top: var(--margin-xs);
+  display: flex;
+  height: 110px;
+  padding: var(--padding-xs);
+}
+
+.titleDiv {
+  width: 30%;
+  margin-left: var(--margin-s);
+}
+
+.jobTitle {
+  font-size: large;
+}
+
+.typePeriodDiv {
+  display: flex;
+  gap: var(--gap-xs);
+  margin-top: var(--margin-xs);
+  align-items: center;
+  height: 30px;
+}
+
+.jobType {
+  font-size: medium;
+}
+
+.jobPeriod {
+  background-color: var(--color-400);
+  padding: var(--padding-xxxs);
+  font-size: 10px;
+  text-align: center;
+}
+
+.experienceDescription {
+  font-size: small;
+  margin-left: var(--margin-m);
+  padding-top: var(--padding-xs);
+  width: 60%;
+}
+
+.spanBorder {
+  height: 2px;
+  width: 96%;
+  background-color: var(--color-400);
+  margin-left: 2%;
+  display: block;
+}
+
+.spanBorder:last-child {
+  display: none;
+}

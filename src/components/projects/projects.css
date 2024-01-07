@@ -1,0 +1,77 @@
+.projectsSection {
+  margin-top: var(--margin-m);
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.projectsContainer {
+  margin-left: var(--margin-s);
+}
+
+.projectsUL {
+  width: 100%;
+  padding-left: var(--padding-xxl);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 5%;
+  margin-top: 25px;
+}
+
+.projectsLi {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-000);
+  border: 1px solid var(--color-110);
+  width: 300px;
+  margin-top: var(--margin-m);
+}
+
+.projectImg {
+  height: 95px;
+  width: 140px;
+  align-self: center;
+  margin-top: var(--margin-s);
+  transition: transform 0.3s;
+}
+
+.projectImg:hover {
+  transform: scale(2.5);
+  border: solid 0.5px var(--color-120);
+}
+
+.infoDiv {
+  margin: 0 var(--margin-s);
+  margin-top: var(--margin-s);
+}
+
+.projectName {
+  margin: var(--margin-xs) 0px;
+  font-size: medium;
+  color: var(--color-300);
+}
+
+.description {
+  font-size: small;
+}
+
+.buttonDiv {
+  display: flex;
+  justify-content: center;
+  gap: var(--gap-xs);
+  padding: var(--padding-s);
+}
+
+.projectCardButton {
+  background-color: var(--color-400);
+  border: none;
+  padding: var(--padding-xxs) var(--padding-xs);
+  font-size: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.projectCardButton:hover {
+  transform: scale(1.1);
+}

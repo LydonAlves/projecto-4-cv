@@ -1,0 +1,27 @@
+.profileSection {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  margin-top: var(--margin-s);
+  width: 95%;
+}
+
+.profileSection > p {
+  text-align: center;
+  margin-top: var(--margin-xs);
+}
+
+.profileDiv {
+  height: 150px;
+  width: 150px;
+  border-radius: var(--border-radius-circle);
+  background-color: rgb(40, 202, 51);
+  align-self: center;
+  overflow: hidden;
+}
+
+.profilePicImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}

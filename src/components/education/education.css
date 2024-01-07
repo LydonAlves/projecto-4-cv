@@ -1,0 +1,55 @@
+.educationCardsSection {
+  margin-top: var(--margin-s);
+  margin-bottom: var(--margin-m);
+  background-color: var(--color-100);
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 var(--padding-xs);
+}
+
+.educationCardsDiv {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.courseDiv {
+  width: 250px;
+  height: 270px;
+  border: var(--color-110) solid 1px;
+  background-color: var(--color-000);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 3%;
+  margin-bottom: 3%;
+}
+
+.courseImg {
+  width: 50%;
+  height: 45%;
+  object-fit: cover;
+  margin-top: var(--margin-s);
+}
+
+.courseName {
+  margin-bottom: var(--margin-s);
+  text-align: center;
+  padding: var(--padding-s);
+  padding-bottom: 0;
+}
+
+.courseDiv > p {
+  margin-left: var(--margin-xs);
+  margin-top: var(--margin-xxs);
+  font-size: small;
+  width: 90%;
+}
+
+.courseDiv > p:last-child {
+  margin-bottom: var(--margin-s);
+}
