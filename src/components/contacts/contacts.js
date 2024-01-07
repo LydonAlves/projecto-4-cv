@@ -4,22 +4,22 @@ const contactMethods = [
   {
     network: 'mobile',
     details: '+34 665 112 221',
-    imgLink: './public/icons/phone.png'
+    imgLink: '/icons/phone.png'
   },
   {
     network: 'email',
     details: 'getit@gmail.com',
-    imgLink: './public/icons/mail.png'
+    imgLink: '/icons/mail.png'
   },
   {
     network: 'linkedIn',
     details: 'linkedin.com/in/lydon-alves-7b396a81/',
-    imgLink: './public/icons/linkedIn.png'
+    imgLink: '/icons/linkedIn.png'
   },
   {
     network: 'location',
     details: 'Granada, Spain',
-    imgLink: './public/icons/location-pointer.png'
+    imgLink: '/icons/location-pointer.png'
   }
 ]
 

@@ -44,7 +44,7 @@ export const createLanguageDivs = () => {
     individualLanguageDiv.className = 'individualLanguageDiv'
     dropDownButton.className = 'dropDownButton'
     dropDown.className = 'dropDown'
-    dropDown.src = './public/icons/dropDown.png'
+    dropDown.src = '/icons/dropDown.png'
     language.className = 'language'
     language.innerText = languageSkill.language
     comments.innerText = languageSkill.comments
@@ -80,14 +80,13 @@ export const createLanguageDivs = () => {
   return languageSection
 }
 
-//? this creates and fills the dots according to array
 const createLevelDots = (languageSkill) => {
   const dotsContainerA = document.createElement('div')
-  //? This isolates the level of language
+
   const proficiency = languageSkill.level
   const dotsContainer = document.createElement('div')
   dotsContainer.className = 'dotsContainer'
-  //? this fills the dots according to the level of language
+
   for (let i = 0; i <= 4; i++) {
     const level = document.createElement('div')
     level.className = 'level'

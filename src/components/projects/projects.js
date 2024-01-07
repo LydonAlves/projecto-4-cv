@@ -2,7 +2,7 @@ import './projects.css'
 
 const projects = [
   {
-    image: './public/projects/nike.png',
+    image: '/projects/nike.png',
     title: 'CSS and HTML',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa possimus eius libero nesciunt illo, earum repellendus placeat corporis iusto laboriosam quas amet, dolor obcaecati veritatis, at unde esse dolorum. Alias?',
@@ -10,7 +10,7 @@ const projects = [
     mockupURL: 'https://proyecto-1-pmba-rtc.netlify.app/'
   },
   {
-    image: './public/projects/tours.png',
+    image: '/projects/tours.png',
     title: 'JS + Vite',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa possimus eius libero nesciunt illo, earum repellendus placeat corporis iusto laboriosam quas amet, dolor obcaecati veritatis, at unde esse dolorum. Alias?',
@@ -18,7 +18,7 @@ const projects = [
     mockupURL: 'https://andalusia-tours.netlify.app/'
   },
   {
-    image: './public/projects/pinterest.png',
+    image: '/projects/pinterest.png',
     title: 'JS Components',
     description:
       'Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa possimus eius libero nesciunt illo, earum repellendus placeat corporis iusto laboriosam quas amet, dolor obcaecati veritatis, at unde esse dolorum. Alias?',
