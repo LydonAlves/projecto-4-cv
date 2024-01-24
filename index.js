@@ -5,9 +5,15 @@ import { createLanguageDivs } from './src/components/languages/languages.js'
 import { skillsIcons } from './src/components/skills/skills.js'
 import { createContactMethods } from './src/components/contacts/contacts.js'
 import { createInfoSection } from './src/components/personalInfo/info.js'
-import { createExperienceCards } from './src/components/experience/experience.js'
+import {
+  createExperienceCards,
+  jobs,
+  makeCards
+} from './src/components/workExperience/experienceCards/workExperience..js'
 import { createEducationCards } from './src/components/education/education.js'
 import { mainLabels } from './src/components/mainLabels/mainLabels.js'
+import { sidebarButtons } from './src/components/sidebarButtons/sidebarButtons.js'
+import { clickSidebbarButtons } from './src/components/clickSidebarButtons/clickSidebarButtons.js'
 
 //! He terminado el proyecto con las funciones pedidos, aún me queda terminar con el css. Iré haciendo el css poco a poco cuando tengo ratos libres, ya que no require mucho esfuerzo. Por ahora entrego el proyecto para poder seguir con el curso.
 
@@ -22,19 +28,23 @@ const addMainToBody = () => {
 const createSidebar = () => {
   const sideBar = document.createElement('article')
   const sideBarDiv = document.createElement('div')
+  const languageAndSkillsDiv = document.createElement('div')
+  const printProfileInfo = createInfoSection()
+  const printSkillsIcons = skillsIcons()
+  const printLanguages = createLanguageDivs()
+  const printContactMethods = createContactMethods()
 
   sideBar.classList.add('sideBar', 'flex-container')
   sideBarDiv.className = 'sideBarDiv'
-
-  const printLanguages = createLanguageDivs()
-  const printSkillsIcons = skillsIcons()
-  const printContactMethods = createContactMethods()
-  const printProfileInfo = createInfoSection()
+  languageAndSkillsDiv.className = 'languageAndSkillsDiv'
+  printContactMethods.classList.add('hide')
 
   sideBarDiv.append(printProfileInfo)
   sideBarDiv.append(printSkillsIcons)
-  sideBarDiv.append(printLanguages)
-  sideBarDiv.append(printContactMethods)
+  sidebarButtons(languageAndSkillsDiv)
+  languageAndSkillsDiv.append(printLanguages)
+  languageAndSkillsDiv.append(printContactMethods)
+  sideBarDiv.append(languageAndSkillsDiv)
   sideBar.append(sideBarDiv)
 
   return sideBar
@@ -63,8 +73,8 @@ const showHideGeneralInfo = () => {
   const educationSection = document.querySelector('#educationId')
 
   const projectsButton = document.querySelector('.projectsButton')
-  const workExperienceButton = document.querySelector('.workExperienceButton')
-  const educationButton = document.querySelector('.educationButton')
+  // const workExperienceButton = document.querySelector('.workExperienceButton')
+  // const educationButton = document.querySelector('.educationButton')
 
   workExperienceSection.className = 'hide'
   educationSection.className = 'hide'
@@ -72,7 +82,7 @@ const showHideGeneralInfo = () => {
 
   const toggleSection = () => {
     const tabButton = document.querySelectorAll('.tabButton')
-    console.log(tabButton)
+    // console.log(tabButton)
     tabButton.forEach((button) => {
       if (
         button.classList.contains('mainTabSelected') &&
@@ -102,7 +112,6 @@ const showHideGeneralInfo = () => {
   document.querySelectorAll('.tabButton').forEach((button) => {
     button.addEventListener('click', () => {
       const clickedButton = document.querySelector('.tabButton.mainTabSelected')
-      console.log('clicked')
       if (clickedButton) {
         clickedButton.classList.remove('mainTabSelected')
       }
@@ -118,8 +127,10 @@ const appendToMain = () => {
 
   main.append(printSideBar)
   main.append(printGeneralInfo)
+  showHideGeneralInfo()
+  makeCards(jobs)
 }
 
 addMainToBody()
 appendToMain()
-showHideGeneralInfo()
+clickSidebbarButtons()

@@ -1,47 +1,66 @@
-import './experience.css'
+// import { eFilterFunction } from '../eFilterFunction/eFIlterFunction'
+import { experienceFilter } from '../experienceFilter/experienceFilter'
+import './workExperience.css'
 
-const jobs = [
+export const jobs = [
   {
     title: 'Student Manager Sondela',
-    type: 'Management',
+    type: ['Management'],
     period: 'May 2010 - June 2021',
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore magni magnam necessitatibus perspiciatis dolore aliquam maiores totam eligendi voluptatem odio aspernatur enim laboriosam fugiat ab recusandae dicta, soluta rerum et..'
   },
   {
     title: 'Teacher Sondela',
-    type: 'Education',
+    type: ['Education'],
     period: 'May 2010 - June 2021',
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore magni magnam necessitatibus perspiciatis dolore aliquam maiores totam eligendi voluptatem odio aspernatur enim laboriosam fugiat ab recusandae dicta, soluta rerum et.'
   },
   {
     title: 'English teacher',
-    type: 'Education',
+    type: ['Education'],
     period: 'May 2010 - June 2021',
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore magni magnam necessitatibus perspiciatis dolore aliquam maiores totam eligendi voluptatem odio aspernatur enim laboriosam fugiat ab recusandae dicta, soluta rerum et.'
   },
   {
     title: 'Assistent director of Studies',
-    type: 'Manager',
+    type: ['Management', 'Education'],
     period: 'May 2010 - June 2021',
+    description:
+      'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore magni magnam necessitatibus perspiciatis dolore aliquam maiores totam eligendi voluptatem odio aspernatur enim laboriosam fugiat ab recusandae dicta, soluta rerum et.'
+  },
+  {
+    title: 'Field guide and Reserve Maintenance Manager',
+    type: ['Management', 'Hospitality'],
+    period: 'Dec 2011 - June 2022',
     description:
       'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore magni magnam necessitatibus perspiciatis dolore aliquam maiores totam eligendi voluptatem odio aspernatur enim laboriosam fugiat ab recusandae dicta, soluta rerum et.'
   }
 ]
 
-export const createExperienceCards = () => {
+export const createExperienceCards = (selectedType) => {
   const experienceCardSection = document.createElement('section')
   const cardDivContainer = document.createElement('div')
+  cardDivContainer.className = 'cardDivContainer'
 
   experienceCardSection.id = 'experienceID'
   experienceCardSection.className = 'experienceCardSection'
-  cardDivContainer.className = 'cardDivContainer'
 
+  experienceFilter(experienceCardSection)
   experienceCardSection.append(cardDivContainer)
+  return experienceCardSection
+}
 
-  for (const job of jobs) {
+export const makeCards = (array) => {
+  const experienceCardSection = document.querySelector('#experienceID')
+  const cardDivContainer =
+    experienceCardSection.querySelector('.cardDivContainer')
+
+  cardDivContainer.innerHTML = ''
+
+  for (const job of array) {
     const cardDiv = document.createElement('div')
     const titleDiv = document.createElement('div')
     const title = document.createElement('h3')
@@ -74,5 +93,5 @@ export const createExperienceCards = () => {
     cardDivContainer.append(spanBorder)
   }
 
-  return experienceCardSection
+  experienceCardSection.append(cardDivContainer)
 }

@@ -23,15 +23,20 @@ const languageSkills = [
     language: 'Dutch',
     level: 2,
     comments:
-      'I learned Dutch while living in Amsterdam for 9 months. I am amble to maintain basic conversations and I can read and understand the language well'
+      'I learned Dutch while living in Amsterdam for 9 months. I am amble to maintain basic conversations and I can read and understand the language well.'
   }
 ]
 
 export const createLanguageDivs = () => {
   const languageSection = document.createElement('section')
-  languageSection.className = 'languageSection'
+  const dropDownText = document.createElement('p')
 
-  //? so that a unique element is created for each element
+  languageSection.className = 'languageSection'
+  dropDownText.className = 'dropDownText'
+  dropDownText.innerText = 'Click on arrows to see more'
+
+  languageSection.append(dropDownText)
+
   for (const languageSkill of languageSkills) {
     const individualLanguageDiv = document.createElement('div')
     const languageDotsDiv = document.createElement('div')
@@ -49,24 +54,24 @@ export const createLanguageDivs = () => {
     language.innerText = languageSkill.language
     comments.innerText = languageSkill.comments
     languageDotsDiv.className = 'languageDotsDiv'
+
     comments.classList.add('comments', 'hide')
 
-    dropDownButton.addEventListener('click', function (event) {
-      if (comments.classList.contains('hide')) {
-        console.log('Showing comments')
-        comments.classList.remove('hide')
-      } else {
-        comments.classList.add('hide')
-      }
+    // dropDownButton.addEventListener('click', function (event) {
+    //   if (comments.classList.contains('hide')) {
+    //     comments.classList.remove('hide')
+    //   } else {
+    //     comments.classList.add('hide')
+    //   }
 
-      if (dropDown.classList.contains('dropDownClicked')) {
-        dropDown.classList.remove('dropDownClicked')
-        dropDown.classList.add('dropDownNotClicked')
-      } else {
-        dropDown.classList.remove('dropDownNotClicked')
-        dropDown.classList.add('dropDownClicked')
-      }
-    })
+    //   if (dropDown.classList.contains('dropDownClicked')) {
+    //     dropDown.classList.remove('dropDownClicked')
+    //     dropDown.classList.add('dropDownNotClicked')
+    //   } else {
+    //     dropDown.classList.remove('dropDownNotClicked')
+    //     dropDown.classList.add('dropDownClicked')
+    //   }
+    // })
 
     dropDownButton.append(dropDown)
     languageDotsDiv.append(dropDownButton)
@@ -77,6 +82,7 @@ export const createLanguageDivs = () => {
     languageSection.append(individualLanguageDiv)
   }
 
+  showDropdownContent(languageSection)
   return languageSection
 }
 
@@ -98,4 +104,36 @@ const createLevelDots = (languageSkill) => {
   dotsContainerA.append(dotsContainer)
 
   return dotsContainerA
+}
+
+export const showDropdownContent = (languageSection) => {
+  const languageDivs = languageSection.querySelectorAll(
+    '.individualLanguageDiv'
+  )
+  const allComments = languageSection.querySelectorAll('.comments')
+  const dropDownImgs = languageSection.querySelectorAll('.dropDown')
+
+  languageDivs.forEach((div) => {
+    const comment = div.querySelector('.comments')
+    const dropDownButton = div.querySelector('.dropDownButton')
+    const dropDownImg = div.querySelector('.dropDown')
+
+    dropDownButton.addEventListener('click', () => {
+      if (dropDownImg.classList.contains('dropDownClicked')) {
+        dropDownImg.classList.remove('dropDownClicked')
+        comment.classList.remove('commentsVisible')
+      } else {
+        dropDownImgs.forEach((dropDown) => {
+          dropDown.classList.remove('dropDownClicked')
+          dropDown.classList.add('dropDownNotClicked')
+        })
+        dropDownImg.classList.add('dropDownClicked')
+        allComments.forEach((comment) => {
+          comment.classList.remove('commentsVisible')
+        })
+
+        comment.classList.add('commentsVisible')
+      }
+    })
+  })
 }

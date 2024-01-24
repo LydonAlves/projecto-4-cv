@@ -1,6 +1,12 @@
 .languageSection {
-  margin-bottom: var(--margin-l);
   width: 95%;
+}
+
+.dropDownText {
+  font-size: small;
+  margin-bottom: var(--margin-xs);
+  color: var(--color-200);
+  text-align: center;
 }
 
 .individualLanguageDiv {
@@ -10,22 +16,30 @@
 .languageDotsDiv {
   display: flex;
   align-items: center;
-  margin: var(--margin-s) var(--margin-s);
   margin-left: var(--margin-xxs);
+  margin-bottom: var(--margin-s);
 }
 
 .dropDownButton {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 20px;
+  width: 23px;
+  height: 23px;
   border: none;
+  cursor: pointer;
+  margin-right: var(--margin-xs);
+}
+
+.dropDownButton:hover {
+  background-color: rgb(250, 221, 167);
+  border-radius: var(--border-radius-circle);
 }
 
 .dropDown {
   width: 13px;
   transform: rotate(-90deg);
+  margin: 5px;
 }
 
 .dropDownNotClicked {
@@ -66,4 +80,15 @@
   margin-left: var(--margin-s);
   margin-top: -8px;
   width: 85%;
+}
+
+.commentsHidden {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.commentsVisible {
+  display: block;
+  opacity: 1;
 }
