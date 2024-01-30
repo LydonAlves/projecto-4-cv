@@ -121,6 +121,10 @@ main {
     flex-direction: column;
   }
 
+  .generalInfo {
+    height: auto;
+  }
+
   .sideBar {
     border: none;
     border-bottom: var(--color-120) 1px solid;

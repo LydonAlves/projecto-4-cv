@@ -76,10 +76,17 @@
 .projectCardButton:hover {
   transform: scale(1.1);
 }
-
-@media screen and (min-width: 370px) and (max-width: 414px) {
+@media screen and (min-width: 300px) and (max-width: 1100px) {
   .projectsSection {
     margin-top: 0;
+    overflow: visible;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 414px) {
+  .projectsSection {
+    margin-top: 0;
+    overflow: visible;
   }
 
   .projectsContainer {
