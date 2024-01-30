@@ -12,7 +12,7 @@ const languageContactDropdown = () => {
 
   LCDropDownButtonDiv.classList.add('LCDropDownButtonDiv')
   dropdownButton.classList.add('dropdownButtonlanguageContact')
-  dropdownButton.innerText = 'Show more'
+  dropdownButton.innerText = 'Show less'
 
   LCDropDownButtonDiv.append(dropdownButton)
   return LCDropDownButtonDiv
