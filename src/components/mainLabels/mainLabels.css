@@ -20,3 +20,20 @@
 .tabButton {
   cursor: pointer;
 }
+
+@media screen and (min-width: 370px) and (max-width: 414px) {
+  .mainLabelsbuttonsDiv {
+    width: 100%;
+    padding-top: var(--padding-s);
+    align-items: center;
+    padding-top: 0;
+  }
+
+  .mainLabelsbuttonsDiv > button {
+    height: 40px;
+    width: 100px;
+    font-size: 15px;
+    padding: var(--padding-xs);
+    justify-content: center;
+  }
+}

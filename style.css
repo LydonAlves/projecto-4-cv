@@ -73,6 +73,7 @@ body {
 
 main {
   background-color: var(--color-100);
+  position: relative;
 }
 
 .sideBar {
@@ -112,4 +113,37 @@ main {
 
 .mainTabSelected {
   color: var(--color-400);
+}
+
+@media screen and (min-width: 1110px) and (max-width: 1030px) {
+}
+
+@media screen and (min-width: 414px) and (max-width: 1110px) {
+}
+
+@media screen and (min-width: 370px) and (max-width: 414px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sideBar {
+    border: none;
+    border-bottom: var(--color-120) 1px solid;
+  }
+
+  .sideBar,
+  .sideBarDiv {
+    width: 100%;
+    height: max-content;
+    padding: 0px;
+    margin-bottom: var(--margin-xs);
+  }
+
+  .languageAndSkillsDiv {
+    position: absolute;
+    z-index: 999;
+    background-color: var(--color-100);
+    width: 100%;
+  }
 }

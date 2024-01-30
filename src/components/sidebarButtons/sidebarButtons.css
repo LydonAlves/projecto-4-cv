@@ -34,3 +34,27 @@
   border: var(--color-400) solid 1px;
   color: var(--color-400);
 }
+
+@media screen and (min-width: 370px) and (max-width: 414px) {
+  .separationLine {
+    display: none;
+  }
+
+  .sidebarButtonsDiv {
+    margin-bottom: var(--margin-xs);
+  }
+
+  .sidebarButtons {
+    width: max-content;
+    height: 30px;
+    padding: var(--padding-xs);
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+  }
+
+  .sidebarButtons:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}

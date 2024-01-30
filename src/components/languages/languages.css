@@ -92,3 +92,17 @@
   display: block;
   opacity: 1;
 }
+
+@media screen and (min-width: 370px) and (max-width: 414px) {
+  .languageSection {
+    margin-top: var(--margin-s);
+  }
+
+  .individualLanguageDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: var(--margin-xs);
+    margin-left: var(--margin-s);
+  }
+}

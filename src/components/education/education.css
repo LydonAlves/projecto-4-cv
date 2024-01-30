@@ -2,12 +2,12 @@
   margin-top: var(--margin-s);
   margin-bottom: var(--margin-m);
   background-color: var(--color-100);
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
-  padding: 0 var(--padding-xs);
+  padding: var(--padding-xs);
+  overflow: scroll;
 }
 
 .educationCardsDiv {

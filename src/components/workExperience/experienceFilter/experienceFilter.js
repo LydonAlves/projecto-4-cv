@@ -23,6 +23,7 @@ export const experienceFilter = (section) => {
   const dropdownContent = document.createElement('select')
   const listItemBlank = document.createElement('option')
 
+  dropDownDiv.classList.add('dropDownDivexperience')
   filterTitle.className = 'filterTitle'
   filterTitle.textContent = 'Search by Job Type'
   dropdownContent.className = 'dropdown-content'

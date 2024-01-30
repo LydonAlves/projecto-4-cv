@@ -1,4 +1,3 @@
-// import { eFilterFunction } from '../eFilterFunction/eFIlterFunction'
 import { experienceFilter } from '../experienceFilter/experienceFilter'
 import './workExperience.css'
 
