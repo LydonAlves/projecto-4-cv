@@ -9,7 +9,7 @@
   display: none;
 }
 
-@media screen and (min-width: 370px) and (max-width: 414px) {
+@media screen and (min-width: 300px) and (max-width: 720px) {
   .dropdownButtonlanguageContact {
     width: max-content;
     height: 25px;

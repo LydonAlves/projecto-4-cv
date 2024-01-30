@@ -53,3 +53,9 @@
 .courseDiv > p:last-child {
   margin-bottom: var(--margin-s);
 }
+
+@media screen and (min-width: 300px) and (max-width: 1100px) {
+  .educationCardsSection {
+    margin-bottom: 0;
+  }
+}
