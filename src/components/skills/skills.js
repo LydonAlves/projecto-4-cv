@@ -1,6 +1,6 @@
 import './skills.css'
 
-const programmingSkills = ['HTML', 'JavaScript', 'CSS']
+const programmingSkills = ['JavaScript', "Node.js", "MongoDb", "React", "Github", 'HTML', 'CSS', "Canva", "Figma"]
 
 export const skillsIcons = () => {
   const skillsSection = document.createElement('section')

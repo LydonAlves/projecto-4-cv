@@ -1,6 +1,7 @@
 export const clickSidebbarButtons = () => {
   const languageAndSkillsDiv = document.querySelector('.languageAndSkillsDiv')
   const languageSection = languageAndSkillsDiv.querySelector('.languageSection')
+
   const contactMethodSection = languageAndSkillsDiv.querySelector(
     '.contactMethodSection'
   )

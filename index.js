@@ -1,19 +1,10 @@
 import './style.css'
-import { printCards } from './src/components/projects/projects.js'
-import {
-  createExperienceCards,
-  jobs,
-  makeCards
-} from './src/components/workExperience/experienceCards/workExperience..js'
-import { createEducationCards } from './src/components/education/education.js'
 import { mainLabels } from './src/components/mainLabels/mainLabels.js'
 import { clickSidebbarButtons } from './src/components/clickSidebarButtons/clickSidebarButtons.js'
-import {
-  createSidebar,
-  languageContactDropdownfunction
-} from './src/components/createSidebar/createSidebar.js'
+import { createSidebar } from './src/components/createSidebar/createSidebar.js'
+import { projectsPage } from './src/pages/projects/projects.js'
+import { about } from './src/pages/about/about.js'
 
-//! He terminado el proyecto con las funciones pedidos, aún me queda terminar con el css. Iré haciendo el css poco a poco cuando tengo ratos libres, ya que no require mucho esfuerzo. Por ahora entrego el proyecto para poder seguir con el curso.
 
 const main = document.createElement('main')
 main.classList.add('grid-container', 'main')
@@ -25,70 +16,55 @@ const addMainToBody = () => {
 
 const createGeneralInfo = () => {
   const generalInfo = document.createElement('article')
-
-  const printProjects = printCards()
-  const printExperienceCards = createExperienceCards()
-  const printEducationCards = createEducationCards()
+  const generalInfoDiv = document.createElement("div")
 
   generalInfo.className = 'generalInfo'
+  generalInfo.id = 'generalInfo'
+  generalInfoDiv.id = "generalInfoDiv"
 
   generalInfo.append(mainLabels())
-  generalInfo.append(printExperienceCards)
-  generalInfo.append(printEducationCards)
-  generalInfo.append(printProjects)
-
+  generalInfo.append(generalInfoDiv)
   return generalInfo
 }
 
-const showHideGeneralInfo = () => {
-  const workExperienceSection = document.querySelector('#experienceID')
-  const projectsSection = document.querySelector('#projectsId')
-  const educationSection = document.querySelector('#educationId')
-  const projectsButton = document.querySelector('.projectsButton')
+const showContent = () => {
+  const tabButton = document.querySelectorAll('.tabButton')
+  const generalInfoDiv = document.querySelector('#generalInfoDiv')
+  const aboutPage = about()
+  const printProjects = projectsPage()
 
-  workExperienceSection.className = 'hide'
-  educationSection.className = 'hide'
-  projectsButton.classList.add('mainTabSelected')
+  let sectionToShow = "projects"
 
-  const toggleSection = () => {
-    const tabButton = document.querySelectorAll('.tabButton')
+  generalInfoDiv.append(printProjects);
+  generalInfoDiv.append(aboutPage)
 
-    tabButton.forEach((button) => {
-      if (
-        button.classList.contains('mainTabSelected') &&
-        button.classList.contains('workExperienceButton')
-      ) {
-        workExperienceSection.classList.add('experienceCardSection')
-        projectsSection.classList.add('hide')
-        educationSection.classList.remove('educationCardsSection')
-      } else if (
-        button.classList.contains('mainTabSelected') &&
-        button.classList.contains('educationButton')
-      ) {
-        workExperienceSection.classList.remove('experienceCardSection')
-        projectsSection.classList.add('hide')
-        educationSection.classList.add('educationCardsSection')
-      } else if (
-        button.classList.contains('mainTabSelected') &&
-        button.classList.contains('projectsButton')
-      ) {
-        workExperienceSection.classList.remove('experienceCardSection')
-        projectsSection.classList.remove('hide')
-        educationSection.classList.remove('educationCardsSection')
-      }
-    })
-  }
-
-  document.querySelectorAll('.tabButton').forEach((button) => {
+  tabButton.forEach((button) => {
     button.addEventListener('click', () => {
-      const clickedButton = document.querySelector('.tabButton.mainTabSelected')
-      if (clickedButton) {
-        clickedButton.classList.remove('mainTabSelected')
+      tabButton.forEach((btn) => btn.classList.remove('tabSelected'));
+      button.classList.add('tabSelected');
+
+      if (
+        button.classList.contains('projectsButton') &&
+        sectionToShow === "about"
+      ) {
+
+        sectionToShow = "projects"
+        aboutPage.classList.add("hide")
+        printProjects.classList.remove("hide")
+
+      } else if (
+        button.classList.contains('aboutPageButton') &&
+        sectionToShow === "projects"
+      ) {
+        sectionToShow = "about"
+        console.log("working about");
+        printProjects.classList.add("hide")
+        aboutPage.classList.remove("hide")
       }
-      button.classList.add('mainTabSelected')
-      toggleSection()
     })
   })
+
+
 }
 
 const appendToMain = () => {
@@ -97,11 +73,12 @@ const appendToMain = () => {
 
   main.append(printSideBar)
   main.append(printGeneralInfo)
-  showHideGeneralInfo()
-  makeCards(jobs)
+  showContent(printGeneralInfo)
 }
 
 addMainToBody()
 appendToMain()
 clickSidebbarButtons()
-languageContactDropdownfunction()
+// languageContactDropdownfunction()
+
+

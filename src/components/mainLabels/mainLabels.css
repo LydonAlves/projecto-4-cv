@@ -1,13 +1,14 @@
 .mainLabelsbuttonsDiv {
   width: 100%;
   display: flex;
-  justify-content: space-around;
-  padding-top: var(--padding-s);
-  background-color: transparent;
+  justify-content: right;
+  padding-top: var(--padding-xxs);
+  background-color: var(--color-301);
 }
 
-.mainLabelsbuttonsDiv > button {
-  height: 40px;
+
+.tabButton {
+  height: 20px;
   font-size: 20px;
   padding: var(--padding-s);
   display: flex;
@@ -15,11 +16,21 @@
   font-weight: 500;
   border: none;
   background-color: transparent;
-}
-
-.tabButton {
   cursor: pointer;
 }
+
+.tabButton:last-child{
+  margin-right: var(--margin-s);
+}
+
+.projectsButton, .aboutPageButton{
+  color: var(--color-200);
+}
+
+.tabSelected{
+  color: var(--color-100);
+}
+
 
 @media screen and (min-width: 370px) and (max-width: 414px) {
   .mainLabelsbuttonsDiv {

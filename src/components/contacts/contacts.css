@@ -6,11 +6,21 @@
 .contactMethodDiv {
   display: flex;
   align-items: center;
-  margin-top: var(--margin-l);
-  gap: var(--gap-s);
-  margin-right: var(--margin-s);
+  margin-top: var(--margin-m);
+  /* gap: var(--gap-s); */
+  /* margin-right: var(--margin-s); */
+}
+
+.contactMethodLink{
+  display: flex;
+ }
+
+.contactMethodText{
+  font-size: 13px;
 }
 
 .contactMethodImg {
   height: 18px;
+  margin-right: var(--margin-s);
 }
+

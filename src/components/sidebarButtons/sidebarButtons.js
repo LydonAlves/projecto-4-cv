@@ -8,17 +8,18 @@ export const sidebarButtons = (div) => {
 
   separationLine.className = 'separationLine'
   sidebarButtonsDiv.className = 'sidebarButtonsDiv'
-  languageButton.classList.add('languageButton', 'sidebarButtons')
+  languageButton.classList.add('languageButton', 'sidebarButtons', 'sidebarButtonsUnselected')
   languageButton.innerText = 'Languages'
+
   contactButton.classList.add(
     'contactButton',
     'sidebarButtons',
-    'sidebarButtonsUnselected'
+
   )
   contactButton.innerText = 'Contact'
 
-  sidebarButtonsDiv.append(languageButton)
   sidebarButtonsDiv.append(contactButton)
+  sidebarButtonsDiv.append(languageButton)
   div.append(separationLine)
   div.append(sidebarButtonsDiv)
 }

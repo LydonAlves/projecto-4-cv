@@ -1,0 +1,83 @@
+.imgCarrouselContainer{
+  height: max-content;
+  background-color: var(--color-300);
+  margin-bottom: var(--margin-xl);
+}
+
+.imgCarrouselContainer:last-child{
+  margin-bottom: var(--margin-xl);
+}
+
+.imgCarrouselDiv{
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: var(--margin-l);
+}
+
+.imgCarrouselTitle{
+ margin-bottom: var(--margin-xxs);
+ font-size: 20px;
+ background-color: var(--color-300);
+ color: var(--color-100);
+ font-weight: 600;
+ width: 100%;
+ padding: var(--padding-xs) ;
+ text-indent: 20px;
+}
+
+.imgCarrouselUl{
+  width: max-content;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  gap: var(--gap-l);
+  /* margin-top: var(--margin-s); */
+  padding-bottom: var(--margin-xxs);
+}
+
+.descriptionLi{
+  height:max-content;
+}
+
+
+.imgDescriptionDiv{
+  height: 400px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.imgElement{
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.301);
+  margin: 0 var(--padding-s);
+}
+
+.imgDescription{
+  text-align: center;
+  margin-top: var(--margin-s);
+  margin-bottom: var(--margin-s);
+  color: var(--color-100);
+}
+
+/* --------------------------------------- */
+.imgCarrouselDiv::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+/* Track */
+.imgCarrouselDiv::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  background: var(--color-300);
+  margin: 10px;
+}
+
+/* Handle */
+.imgCarrouselDiv::-webkit-scrollbar-thumb {
+  background: #888;
+  background-color: var(--color-400);
+  border-radius: 10px;
+}

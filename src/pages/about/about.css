@@ -1,0 +1,40 @@
+#aboutSection{
+  color: var(--color-000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.aboutDiv{
+  margin-top: var(--margin-xl);
+  margin-left: var(--margin-m);
+  width: 80%;
+  height: 80%;
+  z-index: 2;
+}
+
+.aboutTitle{
+  margin-top: var(--margin-m);
+  margin-bottom: 15px;
+  border-bottom: var(--color-400) 2.5px solid;
+  width: max-content;
+  /* display: inline; */
+
+}
+
+.imgHiking{
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  height:500px;
+  z-index: 0;
+  opacity: 0.3;
+  transform: scaleX(-1);
+}
+
+.aboutPageTexts{
+  margin-bottom: var(--margin-m);
+  width: 79%;
+}

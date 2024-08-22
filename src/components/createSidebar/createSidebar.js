@@ -5,31 +5,31 @@ import { createInfoSection } from '../personalInfo/info.js'
 import { sidebarButtons } from '../sidebarButtons/sidebarButtons.js'
 import { skillsIcons } from '../skills/skills.js'
 
-const languageContactDropdown = () => {
-  const LCDropDownButtonDiv = document.createElement('div')
-  const dropdownButton = document.createElement('button')
-  const dropdownIcon = document.createElement('img')
+// const languageContactDropdown = () => {
+//   const LCDropDownButtonDiv = document.createElement('div')
+//   const dropdownButton = document.createElement('button')
+//   // const dropdownIcon = document.createElement('img')
 
-  LCDropDownButtonDiv.classList.add('LCDropDownButtonDiv')
-  dropdownButton.classList.add('dropdownButtonlanguageContact')
-  dropdownButton.innerText = 'Show less'
+//   LCDropDownButtonDiv.classList.add('LCDropDownButtonDiv')
+//   dropdownButton.classList.add('dropdownButtonlanguageContact')
+//   dropdownButton.innerText = 'Show less'
 
-  LCDropDownButtonDiv.append(dropdownButton)
-  return LCDropDownButtonDiv
-}
+//   LCDropDownButtonDiv.append(dropdownButton)
+//   return LCDropDownButtonDiv
+// }
 
-export const languageContactDropdownfunction = () => {
-  const languageAndSkillsDiv = document.querySelector('.languageAndSkillsDiv')
-  const dropdownButton = document.querySelector(
-    '.dropdownButtonlanguageContact'
-  )
-  //! I need to add the logic that when the screen is small that languageAndSkillsDiv has class "hide", or display none
-  dropdownButton.addEventListener('click', () => {
-    languageAndSkillsDiv.classList.toggle('hide')
-    dropdownButton.innerText =
-      dropdownButton.innerText === 'Show more' ? 'Show less' : 'Show more'
-  })
-}
+// export const languageContactDropdownfunction = () => {
+//   const languageAndSkillsDiv = document.querySelector('.languageAndSkillsDiv')
+//   const dropdownButton = document.querySelector(
+//     '.dropdownButtonlanguageContact'
+//   )
+
+//   dropdownButton.addEventListener('click', () => {
+//     languageAndSkillsDiv.classList.toggle('hide')
+//     dropdownButton.innerText =
+//       dropdownButton.innerText === 'Show more' ? 'Show less' : 'Show more'
+//   })
+// }
 
 export const createSidebar = () => {
   const sideBar = document.createElement('article')
@@ -44,11 +44,11 @@ export const createSidebar = () => {
   sideBar.classList.add('sideBar', 'flex-container')
   sideBarDiv.className = 'sideBarDiv'
   languageAndSkillsDiv.className = 'languageAndSkillsDiv'
-  printContactMethods.classList.add('hide')
+  printLanguages.classList.add('hide')
 
   sideBarDiv.append(printProfileInfo)
   sideBarDiv.append(printSkillsIcons)
-  sideBarDiv.append(languageContactDropdown())
+  // sideBarDiv.append(languageContactDropdown())
   sidebarButtons(languageAndSkillsDiv)
   languageAndSkillsDiv.append(printLanguages)
   languageAndSkillsDiv.append(printContactMethods)

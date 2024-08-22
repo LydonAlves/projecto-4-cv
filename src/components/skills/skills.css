@@ -1,14 +1,18 @@
 .skillsSection {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  margin: var(--margin-m) 0;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: var(--margin-m);
   width: 95%;
 }
 
 .skillItem {
   background-color: var(--color-400);
-  color: var(--color-300);
-  padding: var(--padding-xs);
-  border-radius: var(--border-radius);
+  color: rgba(0, 0, 0, 0.699);
+  padding: var(--padding-xxs) var(--padding-xs);
   font-size: small;
+  margin-bottom: var(--margin-xxs);
 }
+ 

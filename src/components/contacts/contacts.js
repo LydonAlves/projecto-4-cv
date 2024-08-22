@@ -8,7 +8,7 @@ const contactMethods = [
   },
   {
     network: 'email',
-    details: 'getit@gmail.com',
+    details: 'lydonalves@gmail.com',
     imgLink: '/icons/mail.png'
   },
   {
@@ -40,6 +40,61 @@ export const createContactMethods = () => {
 
     contactMethodDiv.append(contactMethodImg)
     contactMethodDiv.append(contactMethodText)
+    contactMethodSection.append(contactMethodDiv)
+
+
+
+    let href;
+    let isCopyable = false;
+    switch (object.network) {
+      case 'mobile':
+        href = `tel:${object.details}`;
+        isCopyable = true;
+        break;
+      case 'email':
+        href = `mailto:${object.details}`;
+        isCopyable = true;
+        break;
+      case 'linkedIn':
+        href = `https://${object.details}`;
+        break;
+      case 'location':
+        href = null;
+        break;
+      default:
+        href = null;
+    }
+
+    if (href && isCopyable) {
+      const contactMethodLink = document.createElement('a')
+      contactMethodLink.href = href
+      contactMethodLink.className = 'contactMethodLink'
+      contactMethodLink.target = '_blank'
+
+      contactMethodLink.addEventListener('click', (event) => {
+        event.preventDefault();
+        navigator.clipboard.writeText(object.details)
+          .then(() => alert(`${object.network.charAt(0).toUpperCase() + object.network.slice(1)} copied to clipboard`))
+          .catch(err => console.error('Failed to copy text: ', err));
+      });
+
+      contactMethodLink.append(contactMethodImg)
+      contactMethodLink.append(contactMethodText)
+      contactMethodDiv.append(contactMethodLink)
+    } else if (href) {
+      const contactMethodLink = document.createElement('a')
+      contactMethodLink.href = href
+      contactMethodLink.className = 'contactMethodLink'
+      contactMethodLink.target = '_blank'
+
+      contactMethodLink.append(contactMethodImg)
+      contactMethodLink.append(contactMethodText)
+      contactMethodDiv.append(contactMethodLink)
+    } else {
+      contactMethodDiv.append(contactMethodImg)
+      contactMethodDiv.append(contactMethodText)
+    }
+
     contactMethodSection.append(contactMethodDiv)
   }
   return contactMethodSection

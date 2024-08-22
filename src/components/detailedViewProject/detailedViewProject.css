@@ -1,0 +1,111 @@
+.detailedViewDiv{
+  background-color: white;
+  z-index: 99;
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: max-content;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 999;
+}
+
+#contentDiv{
+  width: 86%;
+  height: max-content;
+}
+
+.titleDetailedView{
+  margin-top: var(--margin-l);
+  margin-bottom: var(--margin-xs);
+  font-size: 35px;
+  font-weight: 200;
+}
+
+.techDetailedView{
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: var(--margin-s);
+  margin-left: var(--margin-xs);
+  color: var(--color-200);
+}
+
+.imageDiv{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--margin-l);
+}
+
+.imageDetailedView{
+  margin: var(--margin-xxs) 0;
+  object-fit: cover;
+  object-position: center;
+  width: 85%;
+  box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.384);
+}
+
+.projectSpecsDiv{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: var(--margin-l);
+}
+
+.prerequisitsDiv{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.prerequisitsTitle{
+  font-weight: 500;
+  margin-bottom: var(--margin-xxs);
+  margin-left: var(--margin-xs);
+}
+
+.ulPrerequisits{
+  margin-bottom: var(--margin-m);
+}
+
+.liPrerequisits{
+  list-style-type: disc;
+  margin-left: var(--margin-m);
+  margin-bottom: var(--margin-xxs);
+  font-weight: 300;
+}
+
+.mySolutionDiv{
+  display: flex;
+  flex-direction: column;
+  margin-left: var(--margin-l);
+  max-width: 55%;
+  font-weight: 300;
+}
+
+.mySolutionTitle{
+  font-weight: 500;
+  margin-bottom: var(--margin-xxs);
+}
+
+
+/* ------------------------------- */
+.closeButton{
+  height: 20px;
+  width: 20px;
+  position: fixed;
+  top: 20px;
+  right: 35px;
+  z-index: 999;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.closeImg{
+  object-fit: contain;
+  height: 100%;
+}

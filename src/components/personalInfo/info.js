@@ -7,7 +7,8 @@ export const createInfoSection = () => {
   const profileName = document.createElement('p')
   const profileJobTitle = document.createElement('p')
 
-  profilePicImg.src = '/profile.png'
+  // profilePicImg.src = '/profile.png'
+  profilePicImg.src = '/workPhoto.jpg'
   profilePicImg.className = 'profilePicImg'
   profileSection.className = 'profileSection'
   profileDiv.className = 'profileDiv'
