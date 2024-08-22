@@ -19,7 +19,7 @@ export const detailedViewProject = (id) => {
   closeButton.className = 'closeButton';
 
   const closeImg = document.createElement('img');
-  closeImg.src = "/public/closeImg.png";
+  closeImg.src = "/closeImg.png";
   closeImg.alt = 'Close';
   closeImg.className = 'closeImg';
 
