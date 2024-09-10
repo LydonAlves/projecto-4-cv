@@ -104,7 +104,7 @@ export const projects = [
     title: 'ONLINE LANGUAGE LEARNING PLATFORM WITH OPENAI',
     description: "For this project, I developed the frontend using React and the backend with Node.js, meticulously planning the architecture to ensure seamless organization and alignment between both sides. I was particularly excited to integrate AI from OpenAI into the platform, utilizing it both for content creation and for correcting student speech, enhancing the overall learning experience.",
     GIThub: 'https://github.com/LydonAlves/proyecto3-pinterest',
-    mockupURL: 'https://github.com/LydonAlves/project13-Frontend',
+    mockupURL: 'https://project13-frontend-nxgv2fhen-lydons-projects.vercel.app/',
     stack: "React, API, Node.js, MongoDB, Express"
   },
 ]
