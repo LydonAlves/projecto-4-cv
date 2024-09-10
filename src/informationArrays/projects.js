@@ -95,7 +95,7 @@ export const projects = [
     title: 'PLATFORM TO MANAGE DATA FROM CROP HARVESTS AND SALES ',
     description: "I took the opportunity to dive deeper into React by focusing on key concepts like Reducers, states, useEffect, and context, while also implementing custom hooks where necessary. The complexity of the web page provided a valuable challenge, helping me effectively learn and apply the powerful tools React offers.",
     GIThub: 'https://github.com/LydonAlves/proyecto12-ReactAvanzado',
-    mockupURL: 'https://proyecto12-react-advanced.vercel.app/home/temperatureAndHarvest',
+    mockupURL: 'https://proyecto12-react-advanced.vercel.app/',
     stack: "React, API"
   },
   {
